@@ -17,23 +17,24 @@ export const FormWrapper = styled.div`
   height: 60%;
   background-color: white;
   border-radius: 24px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1.4fr 3fr;
 `;
 
 export const ImageContainer = styled.div`
   border-right: 1px solid ${Colors.gray};
   border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
-  width: 30%;
   background-color: ${Colors.tertiary};
 `;
 
 export const InputsContainer = styled.div`
   display: flex;
-  width: 70%;
-  padding-top: 14%;
+  justify-content: center;
+  align-items: center;
 `;
 
-export const InputWrapper = styled.div`
+export const Form = styled.form`
   width: 100%;
+  margin: 0 40px;
 `;

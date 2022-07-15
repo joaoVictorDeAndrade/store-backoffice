@@ -2,8 +2,8 @@ import Colors from "../../Theme/Colors";
 import styled from "styled-components";
 
 export const InputWrapper = styled.div`
-  width: 98%;
-  margin: auto auto 1.5rem;
+  width: 100%;
+  padding: 20px 0;
 `;
 
 export const Label = styled.label`
