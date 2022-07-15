@@ -1,31 +1,44 @@
+import {app} from "../../firebaseConfig";
+import {useContext} from "react";
+import {UserContext} from "../../Context/UserContext";
+import {Navigate} from "react-router-dom";
 import UseForm from "../../Hooks/UseForm";
-import InputComponent from "../../components/Input/Input";
+import Input from "../../components/Input/Input";
+import Button from "../../components/Button/Button";
 
 import {
   Container,
+  Form,
   FormWrapper,
   ImageContainer,
   InputsContainer,
-  InputWrapper,
 } from "./Login.styles";
-
-const styleInputs = {
-  width: "70%",
-};
 
 export default function Login() {
   const email = UseForm("email");
   const password = UseForm("password");
+
+  const {loginWithEmail, login, loading} = useContext(UserContext);
+
+  const handleLogin = e => {
+    e.preventDefault();
+    if (email.validate() && password.validate()) {
+      loginWithEmail(email.value, password.value);
+    }
+  };
+
+  if (login) return <Navigate to="/dashboard" />;
 
   return (
     <Container>
       <FormWrapper>
         <ImageContainer></ImageContainer>
         <InputsContainer>
-          <InputWrapper>
-            <InputComponent label="E-mail" style={styleInputs} {...email} />
-            <InputComponent label="Senha" style={styleInputs} {...password} />
-          </InputWrapper>
+          <Form>
+            <Input label="E-mail" {...email} />
+            <Input label="Senha" {...password} />
+            <Button text="Entrar" onClick={handleLogin} loading={loading} />
+          </Form>
         </InputsContainer>
       </FormWrapper>
     </Container>
