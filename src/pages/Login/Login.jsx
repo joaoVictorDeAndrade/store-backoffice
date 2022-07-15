@@ -5,6 +5,7 @@ import {Navigate} from "react-router-dom";
 import UseForm from "../../Hooks/UseForm";
 import Input from "../../components/Input/Input";
 import Button from "../../components/Button/Button";
+import Logo from "../../assets/svgs/Logo";
 
 import {
   Container,
@@ -32,7 +33,9 @@ export default function Login() {
   return (
     <Container>
       <FormWrapper>
-        <ImageContainer></ImageContainer>
+        <ImageContainer>
+          <Logo />
+        </ImageContainer>
         <InputsContainer>
           <Form>
             <Input label="E-mail" {...email} />

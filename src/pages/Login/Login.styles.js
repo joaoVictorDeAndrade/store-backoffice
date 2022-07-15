@@ -19,13 +19,27 @@ export const FormWrapper = styled.div`
   border-radius: 24px;
   display: grid;
   grid-template-columns: 1.4fr 3fr;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: 425px) {
+    width: 90%;
+  }
 `;
 
 export const ImageContainer = styled.div`
   border-right: 1px solid ${Colors.gray};
   border-top-left-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
-  background-color: ${Colors.tertiary};
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const InputsContainer = styled.div`
