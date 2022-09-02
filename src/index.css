@@ -1,14 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  --type-first: Helvetica, Arial, sans-serif;
+  --type-first: 'Italiana', serif;
   --type-second: 'Spectral', Georgia;
   font-family: var(--type-first);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, p, label, button, input {
+  -webkit-text-stroke: 0.15px;
+  letter-spacing: 0.1px;
 }
 
 code {

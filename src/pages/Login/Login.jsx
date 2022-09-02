@@ -39,7 +39,7 @@ export default function Login() {
         <InputsContainer>
           <Form>
             <Input label="E-mail" {...email} />
-            <Input label="Senha" {...password} />
+            <Input label="Senha" type="password" {...password} />
             <Button text="Entrar" onClick={handleLogin} loading={loading} />
           </Form>
         </InputsContainer>

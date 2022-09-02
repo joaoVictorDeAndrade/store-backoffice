@@ -1,3 +1,13 @@
+import Header from "../../components/Header/Header";
+import SideBar from "../../components/SideBar/SideBar";
+
+import {Container} from "./Dashboard.styles";
+
 export default function Dashboard() {
-  return <h1>Dashboard</h1>;
+  return (
+    <Container>
+      <Header></Header>
+      <SideBar></SideBar>
+    </Container>
+  );
 }
