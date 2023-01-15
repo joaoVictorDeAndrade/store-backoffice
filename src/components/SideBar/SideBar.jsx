@@ -2,35 +2,40 @@ import {SideBar, Navigate, NavList, Button} from "./SideBar.styles";
 import {Link} from "react-router-dom";
 import {HiMenu} from "react-icons/hi";
 import {FaStore} from "react-icons/fa";
-import {useState} from "react";
+import Colors from "../../Theme/Colors";
+
+const iconStyle = {
+  width: "32px",
+  height: "32px",
+  marginRight: "8px",
+  color: `${Colors.primary}`,
+};
 
 const navItems = [
   {
     route: "/",
     label: "Home",
-    icon: <HiMenu />,
+    icon: <HiMenu style={iconStyle} />,
   },
   {
     route: "/clients/add",
-    label: "Adicionar Clientes",
-    icon: <FaStore />,
+    label: "Adicionar Cliente",
+    icon: <FaStore style={iconStyle} />,
   },
   {
     route: "/clients",
     label: "Ver Clientes",
-    icon: <FaStore />,
+    icon: <FaStore style={iconStyle} />,
   },
 ];
 
 export default function SideBarComponent() {
-  const [isOpen, setIsOpen] = useState(true);
-
   return (
-    <SideBar isOpen={isOpen}>
+    <SideBar>
       <Navigate>
         <NavList>
           {navItems.map(item => (
-            <Button key={item.route} isOpen={isOpen}>
+            <Button key={item.route}>
               {item.icon}
               <Link to={item.route}>{item.label}</Link>
             </Button>

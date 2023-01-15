@@ -13,7 +13,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, p, label, button, input {
+h1, h2, p, label, button, input, a {
   -webkit-text-stroke: 0.15px;
   letter-spacing: 0.1px;
 }
@@ -50,9 +50,11 @@ a {
   text-decoration: none;
 }
 
-a:hover {
+a:hover, a:active, a:visited, a:focus {
   text-decoration: none;
 }
+
+
 
 fieldset, legend {
   margin: 0;
@@ -77,4 +79,10 @@ fieldset, legend {
     opacity: 1;
     transform: initial;
   }
+}
+
+
+.card {
+  background: white;
+  border-radius: 16px;
 }
