@@ -1,7 +1,7 @@
 import Colors from "../../Theme/Colors";
 import styled from "styled-components";
 
-export const SideBar = styled.div`
+export const SideBar = styled.aside`
   width: 15vw;
   height: calc(100vh - 5rem);
   background-color: ${Colors.shape};

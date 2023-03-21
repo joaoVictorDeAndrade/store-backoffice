@@ -11,6 +11,7 @@ import Clients from "./pages/Clients/Clients";
 
 const routes = [
   {path: "/dashboard", component: <Dashboard />},
+  {path: "/clientes/adicionar", component: <Clients />},
   {path: "/clientes", component: <Clients />},
 ];
 

@@ -1,5 +1,9 @@
 import Container from "../../components/Container/Container";
 
 export default function Clients() {
-  return <Container></Container>;
+  return (
+    <Container>
+      <div>oiu</div>
+    </Container>
+  );
 }
