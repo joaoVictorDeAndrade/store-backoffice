@@ -1,4 +1,4 @@
-import {SideBar, Navigate, NavList, Button} from "./SideBar.styles";
+import {SideBar, Navigate, NavList} from "./SideBar.styles";
 import {Link} from "react-router-dom";
 import {HiMenu} from "react-icons/hi";
 import {FaStore} from "react-icons/fa";
@@ -11,6 +11,15 @@ const iconStyle = {
   color: `${Colors.primary}`,
 };
 
+const linkStyle = {
+  display: "flex",
+  alignItems: "center",
+  padding: "0 16px",
+  margin: "8px 0",
+  fontSize: "1.2rem",
+  color: "black",
+};
+
 const navItems = [
   {
     route: "/",
@@ -18,12 +27,12 @@ const navItems = [
     icon: <HiMenu style={iconStyle} />,
   },
   {
-    route: "/clients/add",
+    route: "/clientes/adicionar",
     label: "Adicionar Cliente",
     icon: <FaStore style={iconStyle} />,
   },
   {
-    route: "/clients",
+    route: "/clientes",
     label: "Ver Clientes",
     icon: <FaStore style={iconStyle} />,
   },
@@ -35,10 +44,10 @@ export default function SideBarComponent() {
       <Navigate>
         <NavList>
           {navItems.map(item => (
-            <Button key={item.route}>
-              {item.icon}
-              <Link to={item.route}>{item.label}</Link>
-            </Button>
+            <Link style={linkStyle} to={item.route} key={item.route}>
+              <i>{item.icon}</i>
+              <span>{item.label}</span>
+            </Link>
           ))}
         </NavList>
       </Navigate>

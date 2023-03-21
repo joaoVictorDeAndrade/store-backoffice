@@ -1,5 +1,5 @@
 import {createContext, useState} from "react";
-import {getAuth, signInWithEmailAndPassword} from "firebase/auth";
+import {getAuth, signInWithEmailAndPassword, signOut} from "firebase/auth";
 import {element} from "prop-types";
 
 export const UserContext = createContext();
@@ -24,9 +24,18 @@ export const UserStorage = ({children}) => {
     }
   };
 
+  const logout = async () => {
+    try {
+      await signOut(auth);
+      setLogin(false);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <UserContext.Provider
-      value={{loginWithEmail, login, dataUser, loading, error}}>
+      value={{loginWithEmail, login, dataUser, loading, error, logout}}>
       {children}
     </UserContext.Provider>
   );
