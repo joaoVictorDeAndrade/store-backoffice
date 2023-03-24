@@ -1,6 +1,7 @@
 import {Wrapper, Title, Line} from "./Title.style";
+import {string} from "prop-types";
 
-export default function Title({text}) {
+export default function TitleComponent({text}) {
   return (
     <Wrapper>
       <Title>{text}</Title>
@@ -8,3 +9,7 @@ export default function Title({text}) {
     </Wrapper>
   );
 }
+
+TitleComponent.propTypes = {
+  text: string.isRequired,
+};

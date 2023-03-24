@@ -2,14 +2,16 @@ import Header from "../Header/Header";
 import SideBar from "../SideBar/SideBar";
 import {element} from "prop-types";
 
-import {Wrapper, Main} from "./Container.styles";
+import {Wrapper, Main, WrapperChildren} from "./Container.styles";
 
 export default function Container({children}) {
   return (
     <Wrapper>
       <Header></Header>
       <SideBar></SideBar>
-      <Main>{children}</Main>
+      <Main>
+        <WrapperChildren>{children}</WrapperChildren>
+      </Main>
     </Wrapper>
   );
 }

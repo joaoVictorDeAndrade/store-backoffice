@@ -16,13 +16,14 @@ body {
 
 h1,
 h2,
+h3,
 p,
 label,
 button,
 input,
 a {
   -webkit-text-stroke: 0.15px;
-  letter-spacing: 0.1px;
+  letter-spacing: 0.4px;
 }
 
 code {

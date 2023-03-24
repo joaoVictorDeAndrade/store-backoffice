@@ -1,4 +1,4 @@
-import {ButtonStyled} from "./Button.styles";
+import {Button} from "./Button.styles";
 import {bool, func, string} from "prop-types";
 import {Oval} from "react-loader-spinner";
 
@@ -9,19 +9,19 @@ const LoadingIcon = (
   <Oval height={"1.5rem"} color={"white"} secondaryColor={Colors.dark} />
 );
 
-export default function Button({text, onClick, loading}) {
+export default function ButtonComponent({text, onClick, loading}) {
   return (
-    <ButtonStyled onClick={onClick} disabled={loading}>
+    <Button onClick={onClick} disabled={loading}>
       <ConditionalComponent
         condition={loading}
         value1={LoadingIcon}
         value2={text}
       />
-    </ButtonStyled>
+    </Button>
   );
 }
 
-Button.propTypes = {
+ButtonComponent.propTypes = {
   text: string.isRequired,
   onClick: func.isRequired,
   loading: bool,

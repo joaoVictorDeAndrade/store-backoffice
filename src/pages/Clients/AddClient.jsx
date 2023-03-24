@@ -1,10 +1,10 @@
 import Container from "../../components/Container/Container";
 import Title from "../../components/Title/Title";
 
-export default function Dashboard() {
+export default function AddClient() {
   return (
     <Container>
-      <Title text="Dashboard" />
+      <Title text="Adicionar Cliente" />
     </Container>
   );
 }

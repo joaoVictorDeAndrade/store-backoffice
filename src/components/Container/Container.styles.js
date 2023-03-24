@@ -14,4 +14,9 @@ export const Main = styled.main`
   @media (max-width: 768px) {
     margin-left: 60px;
   }
-`
+`;
+
+export const WrapperChildren = styled.div`
+  margin-top: 5rem;
+  padding: 2rem;
+`;
