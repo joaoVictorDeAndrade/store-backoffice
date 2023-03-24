@@ -8,9 +8,11 @@ import NotFound from "./pages/NotFound/NotFound";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
 import Clients from "./pages/Clients/Clients";
+import AddClient from "./pages/Clients/AddClient";
 
 const routes = [
   {path: "/dashboard", component: <Dashboard />},
+  {path: "/clientes/adicionar", component: <AddClient />},
   {path: "/clientes", component: <Clients />},
 ];
 

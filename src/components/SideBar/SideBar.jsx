@@ -1,7 +1,7 @@
 import {SideBar, Navigate, NavList} from "./SideBar.styles";
 import {Link} from "react-router-dom";
-import {HiMenu} from "react-icons/hi";
-import {FaStore} from "react-icons/fa";
+import {FaHome, FaListUl} from "react-icons/fa";
+import {BsPersonAdd} from "react-icons/bs";
 import Colors from "../../Theme/Colors";
 
 const iconStyle = {
@@ -24,17 +24,17 @@ const navItems = [
   {
     route: "/",
     label: "Home",
-    icon: <HiMenu style={iconStyle} />,
+    icon: <FaHome style={iconStyle} />,
   },
   {
     route: "/clientes/adicionar",
     label: "Adicionar Cliente",
-    icon: <FaStore style={iconStyle} />,
+    icon: <BsPersonAdd style={iconStyle} />,
   },
   {
     route: "/clientes",
     label: "Ver Clientes",
-    icon: <FaStore style={iconStyle} />,
+    icon: <FaListUl style={iconStyle} />,
   },
 ];
 

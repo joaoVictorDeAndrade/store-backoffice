@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Colors from "../../Theme/Colors";
 
-export const ButtonStyled = styled.button`
+export const Button = styled.button`
   padding: 10px 20px;
   background-color: ${Colors.primary};
   min-width: 8rem;

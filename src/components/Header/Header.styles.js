@@ -11,6 +11,7 @@ export const Header = styled.header`
   justify-content: space-between;
   padding: 0px 2rem;
   position: fixed;
+  margin-bottom: 5rem;
 `;
 
 export const Button = styled.button`
