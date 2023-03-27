@@ -1,10 +1,10 @@
-import {CardStyled} from "./Card.styles";
+import {Card} from "./Card.styles";
 import {element} from "prop-types";
 
-export default function Card({children}) {
-  return <CardStyled>{children}</CardStyled>;
+export default function CardComponent({children}) {
+  return <Card>{children}</Card>;
 }
 
-Card.propTypes = {
+CardComponent.propTypes = {
   children: element.isRequired,
 };

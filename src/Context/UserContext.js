@@ -1,14 +1,16 @@
 import {createContext, useState} from "react";
 import {getAuth, signInWithEmailAndPassword, signOut} from "firebase/auth";
 import {element} from "prop-types";
+import {useLocalStorage} from "../Hooks/UseLocalStorage";
 
 export const UserContext = createContext();
 
 export const UserStorage = ({children}) => {
-  const [login, setLogin] = useState(false);
   const [loading, setLoading] = useState(false);
   const [dataUser, setDataUser] = useState({});
   const [error, setError] = useState(null);
+
+  const [login, setLogin] = useLocalStorage("login", "");
 
   const auth = getAuth();
 

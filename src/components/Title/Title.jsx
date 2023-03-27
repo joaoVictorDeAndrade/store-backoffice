@@ -1,10 +1,10 @@
 import {Wrapper, Title, Line} from "./Title.style";
 import {string} from "prop-types";
 
-export default function TitleComponent({text}) {
+export default function TitleComponent({text, fontSize = "1.5rem"}) {
   return (
     <Wrapper>
-      <Title>{text}</Title>
+      <Title style={{fontSize}}>{text}</Title>
       <Line />
     </Wrapper>
   );
@@ -12,4 +12,5 @@ export default function TitleComponent({text}) {
 
 TitleComponent.propTypes = {
   text: string.isRequired,
+  fontSize: string,
 };

@@ -8,12 +8,13 @@ import NotFound from "./pages/NotFound/NotFound";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import PrivateRoute from "./components/PrivateRoute";
 import Clients from "./pages/Clients/Clients";
-import AddClient from "./pages/Clients/AddClient";
+import ClientDetails from "./pages/Clients/ClientDetails";
 
 const routes = [
   {path: "/dashboard", component: <Dashboard />},
-  {path: "/clientes/adicionar", component: <AddClient />},
   {path: "/clientes", component: <Clients />},
+  {path: "/clientes/adicionar", component: <ClientDetails />},
+  {path: "/clientes/detalhes/:id", component: <ClientDetails />},
 ];
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
       <UserStorage>
         <Routes>
           <Route path="/" element={<Login />} />
-          {routes.map(item => (
+          {routes.map((item) => (
             <Route
               key={item.path}
               path={item.path}

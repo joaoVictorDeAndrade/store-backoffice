@@ -21,7 +21,8 @@ p,
 label,
 button,
 input,
-a {
+a,
+#text {
   -webkit-text-stroke: 0.15px;
   letter-spacing: 0.4px;
 }
