@@ -33,6 +33,6 @@ InputComponent.propTypes = {
   value: string.isRequired,
   error: string,
   onChange: func.isRequired,
-  onBlur: func.isRequired,
+  onBlur: func,
   style: object,
 };
