@@ -10,6 +10,6 @@ export const Button = styled.button`
   cursor: pointer;
   &:hover {
     background-color: ${Colors.primary};
-    border: 1px solid ${Colors.tertiary};
+    box-shadow: 0 0 0 1px ${Colors.tertiary};
   }
 `;

@@ -22,6 +22,20 @@ export default function Clients() {
     getClients();
   }, []);
 
+  const getMySelf = async () => {
+    try {
+      const response = await fetch("http://localhost:3000/meus-dados");
+      const json = await response.json();
+      console.log(json);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+
+  useEffect(() => {
+    getMySelf();
+  }, []);
+
   const getClients = async () => {
     const response = await fetchClients();
     setClients(response.clients);
@@ -30,7 +44,7 @@ export default function Clients() {
     setLoading(false);
   };
 
-  const goToClientDetails = (cpf) => {
+  const goToClientDetails = cpf => {
     navigate(`/clientes/detalhes/${cpf}`);
   };
 
@@ -42,7 +56,7 @@ export default function Clients() {
         {loading ? (
           <Loading height="3rem" />
         ) : (
-          clients.map((client) => (
+          clients.map(client => (
             <ClientCard key={client.cpf}>
               <div>
                 <label>Nome: </label>
