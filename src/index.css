@@ -103,3 +103,7 @@ legend {
   border-radius: 16px;
   max-width: 80%;
 }
+
+.link-sidebar:hover {
+  background: #f0f0f0;
+}

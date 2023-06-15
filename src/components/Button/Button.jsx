@@ -23,6 +23,6 @@ export default function ButtonComponent({text, onClick, loading}) {
 
 ButtonComponent.propTypes = {
   text: string.isRequired,
-  onClick: func.isRequired,
+  onClick: func,
   loading: bool,
 };

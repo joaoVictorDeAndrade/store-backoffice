@@ -5,7 +5,7 @@ export const SideBar = styled.div`
   width: 15vw;
   height: calc(100vh - 5rem);
   background-color: ${Colors.shape};
-  box-shadow: 0 10px 10px -1px #333333;
+  box-shadow: 0 10px 3px -1px #333333;
   position: fixed;
   top: 5rem;
   z-index: 999;

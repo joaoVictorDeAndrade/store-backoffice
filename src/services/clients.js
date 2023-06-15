@@ -8,6 +8,7 @@ import {
   orderBy,
   limit,
   where,
+  addDoc,
 } from "firebase/firestore";
 import {db} from "../firebaseConfig";
 const clientsRef = collection(db, "clients");
@@ -28,9 +29,14 @@ export async function fetchClients(field = "name", maxQuery = 10) {
   }
 }
 
-export async function previousClients(firstClient) {}
-
-export async function nextClients(lastClient) {}
+export async function postClient(newClient) {
+  try {
+    const docRef = await addDoc(collection(db, "clients"), newClient);
+    console.log("new client", docRef.id);
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 export async function fetchClientByCPF(cpf) {
   try {

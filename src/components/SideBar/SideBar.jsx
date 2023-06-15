@@ -43,8 +43,12 @@ export default function SideBarComponent() {
     <SideBar>
       <Navigate>
         <NavList>
-          {navItems.map(item => (
-            <Link style={linkStyle} to={item.route} key={item.route}>
+          {navItems.map((item) => (
+            <Link
+              style={linkStyle}
+              className="link-sidebar"
+              to={item.route}
+              key={item.route}>
               <i>{item.icon}</i>
               <span>{item.label}</span>
             </Link>
